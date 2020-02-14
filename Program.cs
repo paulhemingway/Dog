@@ -24,17 +24,15 @@ namespace Dog
 
         public void Bark(int count)
         {
+            Console.Write("\n");
             for (int i = 0; i < count; i++)
             {
                 Console.Write("Woof! ");
-                if (i == count - 1)
-                {
-                    Console.Write("\n");
-                }
             }
         }
         public string GetTag()
         {
+            Console.Write("\n");
             string herHis, sheHe, yearYears;
             if (gender == Gender.Male)
             {
@@ -44,11 +42,11 @@ namespace Dog
                 herHis = "Her";
                 sheHe = "she";
             }
-            if (age > 1)
+            if (age == 1)
             {
-                yearYears = "years";
-            }else{
                 yearYears = "year";
+            }else{
+                yearYears = "years";
             }
             string str = $"If lost, call {owner}. {herHis} name is {name} and {sheHe} is {age} {yearYears} old.";
             return str;
